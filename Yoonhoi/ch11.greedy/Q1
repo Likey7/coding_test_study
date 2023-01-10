@@ -1,0 +1,9 @@
+- itertools
+- enumerate
+- i,value 사용이랑 그냥 index 로 접근이랑 속도 시간에 차이가 있나?
+- list comprehension
+- 2차원 배열 초기화 
+arr = [[0 for col in range(4)] for row in range(3)]
+
+
+- 행렬 회전 / 대칭 구현 
