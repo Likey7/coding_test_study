@@ -46,9 +46,14 @@ def watch(x, y):
             if graph[nx][ny] == 'S':
                 return True
             else:
-                check = move(nx, ny, direction)
-                if check:
-                    return True
+                for _ in range(n):
+                    nx += dx[i]
+                    ny += dy[i]
+                    if nx >= 0 and ny >= 0 and nx < n and ny < n and graph[nx][ny] != 'O':
+                        if graph[x][y] == 'S':
+                            return True
+               
+                
     
     return False
 
@@ -87,7 +92,9 @@ def dfs(count):
                     # 장애물 설치했고 선생님이 체크함 통과가 되면 바로 종료
                     if not watch(i, j):
                         cnt += 1
+                       
         
+            
         if cnt == teacher:
             answer = True
 
