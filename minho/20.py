@@ -54,7 +54,7 @@ def watch(x, y):
 
 def move(x, y, direction):
     
-    while x >= 0 and y >= 0 and x < n and y < n and graph[x][y] != 'O':
+    for _ in range(n):
         
         if direction == 'n': # n 북쪽
             x -= 1
@@ -65,7 +65,7 @@ def move(x, y, direction):
         elif direction == 'w': # w 서쪽
             y -= 1
         
-        if graph[x][y] == 'S':
+        if x >= 0 and y >= 0 and x < n and y < n and graph[x][y] == 'S':
             return True
                 
     return False
