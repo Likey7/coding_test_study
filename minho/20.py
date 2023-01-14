@@ -65,8 +65,9 @@ def move(x, y, direction):
         elif direction == 'w': # w 서쪽
             y -= 1
         
-        if x >= 0 and y >= 0 and x < n and y < n and graph[x][y] == 'S':
-            return True
+        if x >= 0 and y >= 0 and x < n and y < n and graph[x][y] != 'O':
+            if graph[x][y] == 'S':
+                return True
                 
     return False
 
