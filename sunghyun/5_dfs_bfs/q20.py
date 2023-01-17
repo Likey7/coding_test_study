@@ -23,24 +23,25 @@ for i in range(n):
 
 def deploy_obstruct(count):
     if count == 3:
-        count = 0
+
         print(board)
         print("count 3")
         print("this is check " + str(check()))
         check()
         if succeed:
             return "YES"
+        else: 
 
-    for i in range(n):
-        for j in range(n):
-            print("this is count " + str(count))
+            for i in range(n):
+                for j in range(n):
+                    print("this is count " + str(count))
 
-            if board[i][j] =='X':
-                board[i][j] = 'O'
-                count += 1
-                deploy_obstruct(count)
-                board[i][j] = 'X'
-                count -= 1
+                    if board[i][j] =='X':
+                        board[i][j] = 'O'
+                        count += 1
+                        deploy_obstruct(count)
+                        board[i][j] = 'X'
+                        count -= 1
     return "NO"
                 
 
