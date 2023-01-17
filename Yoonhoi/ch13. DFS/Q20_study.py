@@ -9,14 +9,14 @@ def simulation():
                 teachers.append((i,j)) 
     
     global flag 
-    flag = False # 학생 아직 본적 없으니 초기화 해준다음 
+    flag = False # 학생 아직 본적 없으니 초기화
     while teachers :
         x,y = teachers.popleft()
         for i in range(4):
             flag = search(x,y, dx[i],dy[i]) 
             if flag :  
-                return False # 나왔으면 실패에욤
-    # while 문 안에서 플래그에 한번도 안걸렸다는건 ~~ 학생을 못봤다는 건데  그럼 성공이니까 True
+                return False # 나왔으면 실패
+    # while 문 안에서 플래그에 한번도 안걸렸ek -> 학생을 못봤다는 건데  그럼 성공이니까 True
     return True
     
             
@@ -54,7 +54,6 @@ def makeWall(cnt): # True 가 리턴되었단건데
                     if result: # 해당 벽이 성공했다면 
                         return True
                     graph[i][j]='X'
-                    
         return False
     
 
